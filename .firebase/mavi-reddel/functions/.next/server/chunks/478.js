@@ -43,6 +43,10 @@ module.exports = {
 
 // Exports
 module.exports = {
+<<<<<<< HEAD
+=======
+	"confetti": "SubscribeWidget_confetti__Qcy_2",
+>>>>>>> b9b4516c9c5a1dd2900c656a44cad77481f434c9
 	"listo": "SubscribeWidget_listo__GyPr2"
 };
 
@@ -386,11 +390,22 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "F": () => (/* binding */ database)
 /* harmony export */ });
 /* unused harmony export app */
+<<<<<<< HEAD
 /* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3745);
 /* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9500);
 /* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1492);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([firebase_app__WEBPACK_IMPORTED_MODULE_0__, firebase_analytics__WEBPACK_IMPORTED_MODULE_1__, firebase_firestore__WEBPACK_IMPORTED_MODULE_2__]);
 ([firebase_app__WEBPACK_IMPORTED_MODULE_0__, firebase_analytics__WEBPACK_IMPORTED_MODULE_1__, firebase_firestore__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+=======
+/* harmony import */ var _variables_env__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7196);
+/* harmony import */ var _variables_env__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_variables_env__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3745);
+/* harmony import */ var firebase_analytics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9500);
+/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1492);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([firebase_app__WEBPACK_IMPORTED_MODULE_1__, firebase_analytics__WEBPACK_IMPORTED_MODULE_2__, firebase_firestore__WEBPACK_IMPORTED_MODULE_3__]);
+([firebase_app__WEBPACK_IMPORTED_MODULE_1__, firebase_analytics__WEBPACK_IMPORTED_MODULE_2__, firebase_firestore__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+>>>>>>> b9b4516c9c5a1dd2900c656a44cad77481f434c9
 // Import the functions you need from the SDKs you need
 
 
@@ -400,7 +415,11 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([fire
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
+<<<<<<< HEAD
     apiKey: process.env.firebase_api_key,
+=======
+    apiKey: firebase_api_key,
+>>>>>>> b9b4516c9c5a1dd2900c656a44cad77481f434c9
     authDomain: "mavi-reddel.firebaseapp.com",
     projectId: "mavi-reddel",
     storageBucket: "mavi-reddel.appspot.com",
@@ -409,13 +428,29 @@ const firebaseConfig = {
     measurementId: "G-NXLMQK3M17"
 };
 // Initialize Firebase
+<<<<<<< HEAD
 const app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);
 //export const analytics = getAnalytics(app);
 const database = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_2__.getFirestore)(app);
+=======
+const app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_1__.initializeApp)(firebaseConfig);
+//export const analytics = getAnalytics(app);
+const database = (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_3__.getFirestore)(app);
+>>>>>>> b9b4516c9c5a1dd2900c656a44cad77481f434c9
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
 
+<<<<<<< HEAD
+=======
+/***/ }),
+
+/***/ 7196:
+/***/ (() => {
+
+firebase_api_key = "AIzaSyDqb8u71XP7od6l37zE-c9kiLCHRZQDXCk"
+
+>>>>>>> b9b4516c9c5a1dd2900c656a44cad77481f434c9
 /***/ })
 
 };
