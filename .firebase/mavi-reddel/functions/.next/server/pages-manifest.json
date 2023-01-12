@@ -1,15 +1,8 @@
 {
-<<<<<<< HEAD
-  "/api/hello": "pages/api/hello.js",
   "/_app": "pages/_app.js",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
-=======
-  "/_error": "pages/_error.js",
-  "/_app": "pages/_app.js",
   "/api/hello": "pages/api/hello.js",
   "/": "pages/index.html",
->>>>>>> b9b4516c9c5a1dd2900c656a44cad77481f434c9
   "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
