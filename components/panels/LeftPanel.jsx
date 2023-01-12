@@ -11,7 +11,7 @@ const LeftPanel = () => {
     <div className={styles.container}>
       <div className={styles.reddellogo}>
         <Image
-          src="/reddel_logo_outlined_white.png"
+          src="/reddel_logo_outlined_white.svg"
           alt=""
           width={50}
           height={50}
@@ -21,7 +21,7 @@ const LeftPanel = () => {
       <div className={styles.tembokcodelogo}>
         <a href="https://tembok.maviweb.app">
           <Image
-            src="/tembok_code_white.png"
+            src="/tembok_code_white.svg"
             alt="Developed by TEMBOK Code"
             title="Developed by TEMBOK Code"
             width={100}

@@ -94,8 +94,8 @@ function animateIcon(id, maxSize = 200, fallOff = 0.75) {
       with (icon) {
         style.width = location.size + "px";
         style.height = location.size + "px";
-        style.top = randSeed(50, 100) + "px";
-        style.left = randSeed(50, 100) + "px";
+        style.top = randSeed(25, 100) + "px";
+        style.left = randSeed(25, 100) + "px";
         style.opacity = 1;
         style.rotate = location.rotation + "deg";
       }
@@ -142,8 +142,13 @@ function getNewLocation(
   ];
   //const maxSize = maxSize;
 
-  const x = randSeed(50, width);
-  const y = randSeed(50, height);
+  var x = randSeed(0, width);
+  var y = randSeed(0, height);
+  //filter locations behing logo area
+  if (x < 100 & y < 100) {
+    x = randSeed(100, width);
+    y = randSeed(100, width);
+  }
   const size = randSeed(32, maxSize);
   const rotation = (randSeed(0, 2) >= 1 ? 1 : -1) * randSeed(0, 360);
   const color = size > maxSize * fallOff ? "#4cfdb0" : "#254857";
