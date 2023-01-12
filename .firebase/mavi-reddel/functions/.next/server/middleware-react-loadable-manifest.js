@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"..\\components\\panels\\LeftPanel.jsx -> ../AnimatedIcons":{id:3222,files:["static/css/7fbc1b26e0f2b4fd.css","static/chunks/222.6f2003b1ba735635.js"]}};
