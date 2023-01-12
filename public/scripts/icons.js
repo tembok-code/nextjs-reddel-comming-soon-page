@@ -45,74 +45,91 @@ function animateIcon(id, maxSize = 200, fallOff = 0.75) {
   icondiv.id = id;
   icondiv.src = "/icons/" + location.icon;
   const text = document.createTextNode(location.icon);
-  with (icondiv) {
-    /* 
-    style.transform =
-      "translate(" + location.startx + "px," + location.starty + "px)";
-    */
-
-    style.width = location.size * 0.5 + "px";
-    style.height = location.size * 0.5 + "px";
-    //style.backgroundImage = "url(/icons/" + location.icon + ")";
-    style.left = location.startx + "px";
-    style.top = location.starty + "px";
-    style.fontSize = location.size + "px";
-    style.color = location.color;
-    style.fill = location.color;
-    style.filter = location.filter;
-    style.opacity = 0;
-    style.transitionProperty = "opacity, rotate, width, height, left, top";
-    style.transitionDuration =
-      t * 0.5 +
-      "ms," +
-      Math.max(t, t * (location.size / 100)) +
-      "ms," +
-      t +
-      "ms," +
-      t +
-      "ms," +
-      t +
-      "ms," +
-      t +
-      "ms";
-
-    //style.transition = "left "+t;
-    /*   style.transition =
-      "opacity 2s," + "translate " + t + "ms cubic-bezier(.9,.13,.91,.11)";
-   */
-  }
 
   //icondiv.appendChild(text);
 
   setTimeout(() => {
-    parent.appendChild(icondiv);
-    //
-
-    //animate after 200ms
-    var icon = parent.querySelector("#" + id);
-    setTimeout(() => {
-      with (icon) {
-        style.width = location.size + "px";
-        style.height = location.size + "px";
-        style.top = randSeed(25, 100) + "px";
-        style.left = randSeed(25, 100) + "px";
-        style.opacity = 1;
-        style.rotate = location.rotation + "deg";
-      }
-      //Opacity back to 0
+    //check if page is visible to user
+    if (document.hidden) {
+      console.log("Page is hidden");
       setTimeout(() => {
-        icon.style.opacity = 0;
-      }, t * 0.25);
-      //Size back to 0
-      /*     setTimeout(() => {
+        animateIcon(id);
+      }, 10 * 1000);
+    } else {
+      console.log("Page is visible");
+
+      //check if icon is appended
+      var icon = parent.querySelector("#" + id);
+      if (icon == null) {
+        parent.appendChild(icondiv);
+        icon = parent.querySelector("#" + id);
+      } else {
+        icon = parent.querySelector("#" + id);
+      }
+      //
+      with (icon) {
+        /* 
+        style.transform =
+          "translate(" + location.startx + "px," + location.starty + "px)";
+        */
+
+        style.width = location.size * 0.5 + "px";
+        style.height = location.size * 0.5 + "px";
+        //style.backgroundImage = "url(/icons/" + location.icon + ")";
+        style.left = location.startx + "px";
+        style.top = location.starty + "px";
+        style.fontSize = location.size + "px";
+        style.color = location.color;
+        style.fill = location.color;
+        style.filter = location.filter;
+        style.opacity = 0;
+        style.transition = "all 0s";
+        //style.transition = "left "+t;
+        /*   style.transition =
+          "opacity 2s," + "translate " + t + "ms cubic-bezier(.9,.13,.91,.11)";
+       */
+      }
+
+      //animate after 200ms
+
+      setTimeout(() => {
+        with (icon) {
+          style.transitionProperty =
+            "opacity, rotate, width, height, left, top";
+          style.transitionDuration =
+            t * 0.5 +
+            "ms," +
+            Math.max(t, t * (location.size / 100)) +
+            "ms," +
+            t +
+            "ms," +
+            t +
+            "ms," +
+            t +
+            "ms," +
+            t +
+            "ms";
+          style.width = location.size + "px";
+          style.height = location.size + "px";
+          style.top = randSeed(25, 100) + "px";
+          style.left = randSeed(25, 100) + "px";
+          style.opacity = 1;
+          style.rotate = location.rotation + "deg";
+        }
+        //Opacity back to 0
+        setTimeout(() => {
+          icon.style.opacity = 0;
+        }, t * 0.25);
+        //Size back to 0
+        /*     setTimeout(() => {
       icon.style.fontSize = "12px";
     }, t * 0.5); */
-      //reset
-      setTimeout(() => {
-        icon.remove();
-        animateIcon(id);
-      }, t);
-    }, randSeed(100, 500));
+        //reset
+        setTimeout(() => {
+          animateIcon(id);
+        }, t);
+      }, randSeed(100, 500));
+    }
   }, randSeed(0, 5000));
 }
 
@@ -145,7 +162,7 @@ function getNewLocation(
   var x = randSeed(0, width);
   var y = randSeed(0, height);
   //filter locations behing logo area
-  if (x < 100 & y < 100) {
+  if ((x < 100) & (y < 100)) {
     x = randSeed(100, width);
     y = randSeed(100, width);
   }
