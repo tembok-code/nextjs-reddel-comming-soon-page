@@ -1,0 +1,18 @@
+.iconscontainer {
+  width: 100%;
+  height: 100%;
+  /*  background-color: red; */
+  position: relative;
+  z-index: -1;
+}
+
+.iconscontainer img {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  /* background-color: green; */
+  color: var(--color-primary);
+  position: fixed;
+  /*   transition: transform 5s cubic-bezier(0.9, 0.13, 0.91, 0.11);
+ */
+}
